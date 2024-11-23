@@ -47,19 +47,20 @@ const EditPost = () => {
         <form onSubmit={updatePost}>
             <input
                 type="title"
-                placeholder="Title"
+                placeholder="Song"
                 value={title}
                 onChange={e => setTitle(e.target.value)}
             />
             <input
                 type="summary"
-                placeholder="Summary"
+                placeholder="Artist"
                 value={summary}
                 onChange={e => setSummary(e.target.value)}
             />
             <input
                 type="file"
                 onChange={e => setFiles(e.target.files)}
+                placeholder="Album Art"
             />
             <textarea
                 name=""
@@ -68,7 +69,7 @@ const EditPost = () => {
                 rows='10'
                 value={content}
                 onChange={e => setContent(e.target.value)}
-                placeholder="Content"
+                placeholder="Lyrics"
             />
             <button style={{ marginTop: '5px' }}>Update post</button>
         </form >

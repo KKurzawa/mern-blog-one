@@ -35,13 +35,13 @@ const CreatePost = () => {
         <form onSubmit={createNewPost}>
             <input
                 type="title"
-                placeholder="Title"
+                placeholder="Song"
                 value={title}
                 onChange={e => setTitle(e.target.value)}
             />
             <input
                 type="summary"
-                placeholder="Summary"
+                placeholder="Artist"
                 value={summary}
                 onChange={e => setSummary(e.target.value)}
             />
@@ -56,7 +56,7 @@ const CreatePost = () => {
                 rows='10'
                 value={content}
                 onChange={e => setContent(e.target.value)}
-                placeholder="Content"
+                placeholder="Lyrics"
             />
             <button style={{ marginTop: '5px' }}>Create post</button>
         </form >

@@ -5,15 +5,19 @@ const IndexPage = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
         fetch('http://localhost:4000/post').then(response => {
-            response.json().then(posts => {
-                setPosts(posts)
-            })
+            if (response.ok) {
+                response.json().then(posts => {
+                    setPosts(posts)
+                })
+            } else {
+                console.log(response)
+            }
         })
     }, [])
     return (
         <>
             {posts.length > 0 && posts.map(post => (
-                <Post {...post} key={post.id} />
+                <Post {...post} key={post._id} />
             ))}
         </>
     )
