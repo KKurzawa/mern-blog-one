@@ -34,6 +34,7 @@ const CreatePost = () => {
     return (
         <article className="create-song-cont">
             <form className='create-song' onSubmit={createNewPost}>
+                <h1>Create Song</h1>
                 <input
                     type="title"
                     placeholder="Song"

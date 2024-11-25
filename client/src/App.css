@@ -41,10 +41,16 @@ header nav{
   cursor: pointer;
 }
 
+.index-main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .posts-cont{
 display: flex;
 flex-direction: column;
 align-items: center;
+max-width: 600px;
 }
 
 div.post{
@@ -52,7 +58,7 @@ display: grid;
 grid-template-columns: 0.9fr 1.1fr;
 gap: 20px;
 margin-bottom: 30px;
-max-width: 600px;
+width: 100%;
 }
 
 div.post div.texts h2{
@@ -220,7 +226,7 @@ textarea{
 
 .create-song,
 .edit-post{
-  width: 400px;
+  width: 325px;
   height: auto;
 }
 

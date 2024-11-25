@@ -46,6 +46,7 @@ const EditPost = () => {
     return (
         <article className="edit-post-cont">
             <form className='edit-post' onSubmit={updatePost}>
+                <h1>Edit Song</h1>
                 <input
                     type="title"
                     placeholder="Song"
