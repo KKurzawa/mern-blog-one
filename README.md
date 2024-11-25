@@ -2,7 +2,7 @@
 # Your Favorite Song
 
 ## Description
-A bookstore app using the MERN stack.  This app uses all the normal dependencies in a MERN application plus Tailwind and Notistack on the front end.  This app was built watching a youTube tutorial.  Link to the tutorial below.
+A song lyric blog app using the MERN stack.  This app uses all the normal dependencies in a MERN application.  Users have the ability to register, login, post a songs/artist/album art/lyrics, view and like all posted songs, and delete/update songs that the user posted.
 
 ![screenshot1](https://github.com/KKurzawa/mern-blog-one/blob/main/client/public/Screenshot1.png)
 ![screenshot2](https://github.com/KKurzawa/mern-blog-one/blob/main/client/public/Screenshot2.png)
