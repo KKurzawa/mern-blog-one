@@ -15,11 +15,11 @@ const IndexPage = () => {
         })
     }, [])
     return (
-        <>
+        <section className="posts-cont">
             {posts.length > 0 && posts.map(post => (
                 <Post {...post} key={post._id} />
             ))}
-        </>
+        </section>
     )
 }
 

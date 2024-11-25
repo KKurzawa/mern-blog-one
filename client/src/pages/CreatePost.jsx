@@ -32,34 +32,37 @@ const CreatePost = () => {
         return <Navigate to={'/'} />
     }
     return (
-        <form onSubmit={createNewPost}>
-            <input
-                type="title"
-                placeholder="Song"
-                value={title}
-                onChange={e => setTitle(e.target.value)}
-            />
-            <input
-                type="summary"
-                placeholder="Artist"
-                value={summary}
-                onChange={e => setSummary(e.target.value)}
-            />
-            <input
-                type="file"
-                onChange={e => setFiles(e.target.files)}
-            />
-            <textarea
-                name=""
-                id=""
-                cols='30'
-                rows='10'
-                value={content}
-                onChange={e => setContent(e.target.value)}
-                placeholder="Lyrics"
-            />
-            <button style={{ marginTop: '5px' }}>Create post</button>
-        </form >
+        <article className="create-song-cont">
+            <form className='create-song' onSubmit={createNewPost}>
+                <input
+                    type="title"
+                    placeholder="Song"
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                />
+                <input
+                    type="summary"
+                    placeholder="Artist"
+                    value={summary}
+                    onChange={e => setSummary(e.target.value)}
+                />
+                <input
+                    type="file"
+                    onChange={e => setFiles(e.target.files)}
+                />
+                <textarea
+                    name=""
+                    id=""
+                    cols='30'
+                    rows='10'
+                    value={content}
+                    onChange={e => setContent(e.target.value)}
+                    placeholder="Lyrics"
+                />
+                <button style={{ marginTop: '5px' }}>Create post</button>
+            </form >
+        </article>
+
     )
 }
 

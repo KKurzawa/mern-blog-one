@@ -51,11 +51,9 @@ const PostPage = () => {
                     </button>
                 </div>
             )}
-            <div className="image">
-                <img className='post-image' src={`http://localhost:4000/${postInfo.cover}`} alt="" />
-            </div>
+            <img className='post-page-image' src={`http://localhost:4000/${postInfo.cover}`} alt="" />
             <h1>{postInfo.summary}</h1>
-            <div className="summary" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
+            <div className="post-page-summary" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
         </div>
     )
 }

@@ -29,12 +29,12 @@ export default function Header() {
 
     return (
         <header>
-            <Link to="/" className="logo">MyBlog</Link>
+            <Link to="/" className="logo">My Favorite Lyrics</Link>
             <nav>
                 {username && (
                     <>
                         <p>Hello {username}</p>
-                        <Link to="/create">Create new post</Link>
+                        <Link to="/create">Create new song</Link>
                         <a className="logout-btn" onClick={logout}>Logout</a>
                     </>
                 )}

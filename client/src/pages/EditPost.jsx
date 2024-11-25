@@ -44,35 +44,38 @@ const EditPost = () => {
         return <Navigate to={'/post/' + id} />
     }
     return (
-        <form onSubmit={updatePost}>
-            <input
-                type="title"
-                placeholder="Song"
-                value={title}
-                onChange={e => setTitle(e.target.value)}
-            />
-            <input
-                type="summary"
-                placeholder="Artist"
-                value={summary}
-                onChange={e => setSummary(e.target.value)}
-            />
-            <input
-                type="file"
-                onChange={e => setFiles(e.target.files)}
-                placeholder="Album Art"
-            />
-            <textarea
-                name=""
-                id=""
-                cols='30'
-                rows='10'
-                value={content}
-                onChange={e => setContent(e.target.value)}
-                placeholder="Lyrics"
-            />
-            <button style={{ marginTop: '5px' }}>Update post</button>
-        </form >
+        <article className="edit-post-cont">
+            <form className='edit-post' onSubmit={updatePost}>
+                <input
+                    type="title"
+                    placeholder="Song"
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                />
+                <input
+                    type="summary"
+                    placeholder="Artist"
+                    value={summary}
+                    onChange={e => setSummary(e.target.value)}
+                />
+                <input
+                    type="file"
+                    onChange={e => setFiles(e.target.files)}
+                    placeholder="Album Art"
+                />
+                <textarea
+                    name=""
+                    id=""
+                    cols='30'
+                    rows='10'
+                    value={content}
+                    onChange={e => setContent(e.target.value)}
+                    placeholder="Lyrics"
+                />
+                <button style={{ marginTop: '5px' }}>Update post</button>
+            </form >
+        </article>
+
     )
 }
 

@@ -8,6 +8,7 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
+const router = require('./Routes/register.js')
 
 // models
 // const User = require('./models/User');
@@ -45,14 +46,16 @@ app.put('/post', uploadMiddleware.single('file'), UpdatePost)
 app.put('/post/like/:id', LikePost)
 app.get('/post', GetPosts)
 app.get('/post/:id', GetPost)
-app.delete('/post:id', DeletePost)
+// app.delete('/post:id', DeletePost)
 
-// app.delete('/post/:id', (req, res) => {
-//     const { id } = req.params
-//     Post.findByIdAndDelete(id)
-//         .then(result => res.json(result))
-//         .catch(err => res.json(err))
-// })
+app.delete('/post/:id', (req, res) => {
+    const { id } = req.params
+    Post.findByIdAndDelete(id)
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+})
+
+// app.use(router)
 
 // database connection 
 mongoose.connect(mongoDBURL).then(() => {
